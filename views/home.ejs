@@ -1,0 +1,52 @@
+
+  <%- include('partials/header'); -%>
+
+
+  <div class="text-center ">
+    <div class="container">
+      <h1>Welcome, Upload your Apps for Free</h1>
+  <img src="images/ajlogo.png" alt="" width="150">
+        <!-- <h5 class="secret-text ">AJ Store</h5> -->
+        
+  
+  
+      
+      <hr>
+    </div>
+  </div>
+  
+  <div class="album py-5 bg-light">
+      <div class="container">
+          <div class="row">
+  
+            <%  ajapps.forEach(function(ajapp){ %>
+  
+                  <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="card mb-4 shadow-sm">
+                        <a class="d-block mx-auto portfolio-item" href="/apps/<%=ajapp._id%>"><img src="<%= ajapp.logo %>" class="bd-placeholder-img card-img-top" width="100%" height="140" /></a>
+                        <div class="card-body">
+                            <center>
+                          <h5 class="card-text mb-3"><%= ajapp.name %></h5>
+                            </center>
+                          <div class="d-flex justify-content-center align-items-center">
+                            <div class="btn-group">
+                              <a type="button" class="btn btn-sm btn-outline-secondary" href="<%= ajapp.download %>"><%= ajapp.ready %></a>
+                            </div>
+                
+                          </div>
+                            <!-- <small class="text-muted">{props.size}</small>  -->
+                        </div>
+                      </div>
+                    </div>
+  
+              <% }) %>
+              
+          </div>
+          <!-- <p  class="secret-text mx-auto text-center"> Beta Version &nbsp;&nbsp;&nbsp; Updated Soon</p> -->
+      </div>
+  </div>
+
+
+
+
+<%- include('partials/footer'); -%>

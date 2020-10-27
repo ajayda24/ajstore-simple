@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+<div class="signup-form">
+  <form  action="/register" method="POST">
+    <h2>Register</h2>
+    <p>Please fill in this form to create an account!</p>
+    <hr>
+    <div class="form-group">
+      <div class="row">
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control"  name="username" placeholder="Email" required="required"  autocomplete="off">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" name="password" placeholder="Password" required="required"  autocomplete="off">
+    </div>
+    <div class="form-group">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-lg">Register</button>
+    </div>
+  </form>
+  <div class="hint-text">Already have an account? <a href="/login" class="text-primary">Login here</a></div>
+</div>
+
+<!-- <div class="container">
+  <center>
+    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/opening-soon%2C-coming-soon-design-template-2ad6ecb3bfc0d528a9999c00a642d447_screen.jpg?ts=1593776133" alt="" width="250rem">
+    <br><br>
+     <a class="btn btn-primary my-2 my-sm-0 m-5" href="https://ajdaniel.gq/contact.html" role="button">Contact Developer</a>
+  </center>
+</div> -->
+
+<%- include('partials/header') %>
